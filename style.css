@@ -151,7 +151,7 @@ overflow: hidden;
     }
     .hero-right{
         display: flex;
-        background-image: url('asset/gallery1.jpg');
+        background-image: url("asset/gallery1.jpg");
         background-position: right;
         background-size: cover;
         border-top-right-radius: 10vw;
