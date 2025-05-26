@@ -151,7 +151,7 @@ overflow: hidden;
     }
     .hero-right{
         display: flex;
-        background-image: url('/asset/gallery1.jpg');
+        background-image: url('asset/gallery1.jpg');
         background-position: right;
         background-size: cover;
         border-top-right-radius: 10vw;
@@ -166,7 +166,7 @@ padding: 2rem;
 overflow: hidden;
     .support-left{
         display: flex;
-        background-image: url('/asset/gallery6.jpg');
+        background-image: url('asset/gallery6.jpg');
         background-position: left;
         background-size: cover;
         border-bottom-left-radius: 10vw;
@@ -222,7 +222,7 @@ overflow: hidden;
         border-top-left-radius: 10vw;
         }
         #card1{
-        background-image: url("/asset/hero_tom_yum_soup2.jpg");
+        background-image: url("asset/hero_tom_yum_soup2.jpg");
         background-position: right;
         background-size: cover;
         }
@@ -241,7 +241,7 @@ overflow: hidden;
         font-size: var(--ptext);
         }
         #card2{
-        background-image: url("/asset/hero_sun_dried_pork2.jpg");
+        background-image: url("asset/hero_sun_dried_pork2.jpg");
         background-position: right;
         background-size: cover;
         }
@@ -260,7 +260,7 @@ overflow: hidden;
         font-size: var(--ptext);
         }
         #card3{
-        background-image: url("/asset/hero_cheesy_crab_rangoon2.jpg");
+        background-image: url("asset/hero_cheesy_crab_rangoon2.jpg");
         background-position: right;
         background-size: cover;
         }
@@ -279,7 +279,7 @@ overflow: hidden;
         font-size: var(--ptext);
         }
         #card4{
-        background-image: url("/asset/hero_mango_sticky_rice2.jpg");
+        background-image: url("asset/hero_mango_sticky_rice2.jpg");
         background-position: right;
         background-size: cover;
         }
@@ -645,7 +645,7 @@ footer{
             height: calc(100vh - 60px);
             align-items: center;
             justify-content: center;
-            background-image: url("/asset/outside_directfront2.jpg");
+            background-image: url("asset/outside_directfront2.jpg");
             background-position: right;
             background-size: cover;
             box-shadow: inset 2000px 2000px rgba(249, 244, 229, 0.9);
@@ -886,7 +886,7 @@ footer{
             display: flex;
             align-items: center;
             justify-content: center;
-            background-image: url("/asset/outside_directfront2.jpg");
+            background-image: url("asset/outside_directfront2.jpg");
             background-position: right;
             background-size: cover;
             box-shadow: inset 2000px 2000px rgba(249, 244, 229, 0.9);
