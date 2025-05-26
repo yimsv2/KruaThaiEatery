@@ -18,10 +18,10 @@ font-weight: 400;
 --milkybrown:#e0d7b7;
 --orange: #e88504;
 --orangegrey:#f9f4e5;
---h1text: clamp(30px, 10vw, 60px); ;
---h2text: clamp(30px, 8vw, 34px);
---h3text: clamp(24px, 6vw, 34px);
---ptext: clamp(20px, 5vw, 26px);
+--h1text: clamp(38px, 10vw, 48px);
+--h2text: clamp(30px, 8vw, 32px);
+--h3text: clamp(24px, 6vw, 28px);
+--ptext: clamp(18px, 5vw, 20px);
 --atext: clamp(18px, 5vw, 20px);
 }
 body{
@@ -143,10 +143,10 @@ overflow: hidden;
         width: 100%;
         color: var(--mainbrown);
         font-size: var(--h2text);
-        margin-top: clamp(2rem, 30vw, 3rem);
+        margin-top: clamp(1rem, 30vw, 2rem);
         }
         .btn{
-            margin-top: clamp(2rem, 30vw, 3rem);
+            margin-top: clamp(1rem, 30vw, 2rem);
         }
     }
     .hero-right{
@@ -645,7 +645,7 @@ footer{
             height: calc(100vh - 60px);
             align-items: center;
             justify-content: center;
-            background-image: url("asset/outside_directfront2.jpg");
+            background-image: url("asset/gallery1.jpg");
             background-position: right;
             background-size: cover;
             box-shadow: inset 2000px 2000px rgba(249, 244, 229, 0.9);
@@ -886,7 +886,7 @@ footer{
             display: flex;
             align-items: center;
             justify-content: center;
-            background-image: url("asset/outside_directfront2.jpg");
+            background-image: url("asset/gallery1.jpg");
             background-position: right;
             background-size: cover;
             box-shadow: inset 2000px 2000px rgba(249, 244, 229, 0.9);
