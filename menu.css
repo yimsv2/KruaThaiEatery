@@ -17,10 +17,10 @@ font-weight: 400;
 --milkybrown:#e0d7b7;
 --orange: #e88504;
 --orangegrey:#f9f4e5;
---h1text: clamp(30px, 10vw, 60px); ;
---h2text: clamp(30px, 8vw, 34px);
---h3text: clamp(24px, 6vw, 34px);
---ptext: clamp(20px, 5vw, 26px);
+--h1text: clamp(38px, 10vw, 48px);
+--h2text: clamp(30px, 8vw, 32px);
+--h3text: clamp(24px, 6vw, 28px);
+--ptext: clamp(18px, 5vw, 20px);
 --atext: clamp(18px, 5vw, 20px);
 }
 body{
