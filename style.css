@@ -29,7 +29,9 @@ max-width: 1920px;
 margin: 0 auto;
 scroll-behavior: smooth;
 }
-
+h2, h3 {
+    letter-spacing: -0.5px;
+}
 P{
     line-height: calc(var(--ptext) * 1.2);
 }
@@ -151,7 +153,7 @@ overflow: hidden;
     }
     .hero-right{
         display: flex;
-        background-image: url("asset/gallery1.jpg");
+        background-image: url('asset/hero_pix.jpg');
         background-position: right;
         background-size: cover;
         border-top-right-radius: 10vw;
@@ -202,7 +204,7 @@ overflow: hidden;
         min-height: 550px;
         width: 100%;
         justify-content: center;
-        gap: 2.5rem;
+        gap: 1.5rem;
         padding: 2rem;
         border: 1px solid var(--milkybrown);
         border-bottom: 0;
@@ -344,13 +346,14 @@ overflow: hidden;
             flex-direction: column;
             justify-content: flex-start;
             align-items: center;
-            width: 100%;
+            width: 45%;
             min-height: 200px;
             border: none;
             color: var(--mainbrown);
             padding: 2rem 3rem;
             border-radius: 15px;
             box-shadow: 1px 1px 5px var(--milkybrown);
+            
             P{
                 font-size: var(--ptext);
             }
@@ -396,20 +399,59 @@ overflow: hidden;
         grid-area: bottom;
         display: grid;
         place-items: center;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 2rem;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(6, minmax(100px, 150px));
+        gap: 1.5rem;
         border: 1px solid var(--milkybrown);
         border-top:0;
         padding: 2rem;
+        overflow: hidden;
         .gallery-photo{
             display: flex;
             width: 100%;
-            aspect-ratio: 1;
+            height: 100%;
             object-fit: cover;
+            border-radius: 15px;
             cursor: pointer;
+            
+        }
+        #photo1{
+            grid-column: 3/span 2;
+            grid-row: 1/span 2;
+        }
+        #photo2{
+            grid-column: 1/span 2;
+            grid-row: 1/span 4;
+        }
+         #photo3{
+            grid-column: 3/span 2;
+            grid-row: 3/span 2;
+        }
+         #photo4{
+            grid-column: 5/span 2;
+            grid-row: 3/span 2;
+        }
+        #photo5{
+            grid-column: 5/span 2;
+            grid-row: 1/span 2;
+        }
+         #photo6{
+            grid-column: 1/span 2;
+            grid-row: 5/span 2;
+        }
+          #photo7{
+            grid-column: 3/span 2;
+            grid-row: 5/span 2;
+        }
+          #photo8{
+            grid-column: 5/span 2;
+            grid-row: 5/span 2;
         }
     }
+ 
 }
+
+
 .modal-footer button{
     outline: none;
     border: none;
@@ -645,7 +687,7 @@ footer{
             height: calc(100vh - 60px);
             align-items: center;
             justify-content: center;
-            background-image: url("asset/gallery1.jpg");
+            background-image: url("asset/hero_pix.jpg");
             background-position: right;
             background-size: cover;
             box-shadow: inset 2000px 2000px rgba(249, 244, 229, 0.9);
@@ -725,7 +767,7 @@ footer{
             border: none;
             .test-cards{
                 display: flex;
-                max-width: 100%;
+                width: 100%;
                 padding: 1rem;
                 p{
                     font-size: var(--ptext);
@@ -747,10 +789,45 @@ footer{
         .gallery-bottom{
             display: grid;
             place-items: center;
-            grid-template-columns: 1fr;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(5, 1fr);
             gap: 1rem;
             .gallery-photo{
-                max-width: 300px;
+                display: flex;
+                width: 100%;
+            
+            }
+            #photo1{
+            grid-column: 1/span 4;
+            grid-row: 1/span 1;
+            }
+            #photo2{
+                grid-column: 1/span 2;
+                grid-row: 2/span 1;
+            }
+            #photo3{
+                grid-column: 3/span 2;
+                grid-row: 3/span 1;
+            }
+            #photo4{
+                grid-column: 1/span 2;
+                grid-row: 3/span 1;
+            }
+            #photo5{
+                grid-column: 3/span 2;
+                grid-row: 2/span 1;
+            }
+            #photo6{
+                grid-column: 1/span 4;
+                grid-row: 4/span 1;
+            }
+            #photo7{
+                grid-column: 1/span 2;
+                grid-row: 5/span 1;
+            }
+            #photo8{
+                grid-column: 3/span 2;
+                grid-row: 5/span 1;
             }
         }
     }
@@ -886,7 +963,7 @@ footer{
             display: flex;
             align-items: center;
             justify-content: center;
-            background-image: url("asset/gallery1.jpg");
+            background-image: url("asset/hero_pix.jpg");
             background-position: right;
             background-size: cover;
             box-shadow: inset 2000px 2000px rgba(249, 244, 229, 0.9);
@@ -967,6 +1044,15 @@ footer{
             grid-area: bottom;
             align-items: center;
             border: none;
+            .test-cards{
+                display: flex;
+                width: 100%;
+                padding: 1rem;
+                p{
+                    font-size: var(--ptext);
+                }
+                
+            }
         }
     }
     #gallery{
@@ -983,10 +1069,45 @@ footer{
         .gallery-bottom{
             display: grid;
             place-items: center;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(6, 300px);
             gap: 2rem;
             .gallery-photo{
                 width: 100%;
+            }
+            #photo1{
+            grid-column: 3/span 2;
+            grid-row: 1/span 1;
+            }
+            #photo2{
+                grid-column: 1/span 2;
+                grid-row: 1/span 2;
+            }
+            #photo3{
+                grid-column: 1/span 4;
+                grid-row: 3/span 1;
+            }
+            #photo4{
+                grid-column: 1/span 2;
+                grid-row: 4/span 1;
+            }
+            #photo5{
+                grid-column: 3/span 2;
+                grid-row: 2/span 1;
+            }
+            #photo6{
+                grid-column: 3/span 2;
+                grid-row: 4/span 1;
+            }
+            #photo7{
+                grid-column: 1/span 4;
+                grid-row: 5/span 1;
+            }
+            #photo8{
+                grid-column: 1/span 4;
+                grid-row: 6/span 1;
+                object-position: bottom;
+
             }
         }
     }
