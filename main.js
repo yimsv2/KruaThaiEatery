@@ -64,12 +64,8 @@ function getData(){
     function showCategory(e){
         let target = e.target.name;
         let allsections = document.querySelectorAll(".menu");
-        target==""? clickBtnAll():"";
-        target=="all"? showAll(): showTarget(target);
+        ((target=="all")||(target==""))? showAll(): showTarget(target);
 
-        function clickBtnAll(){
-          document.getElementById("btnAll").click();
-        }
         function showAll(){
             allsections.forEach((section)=>{
                 section.style.display = "flex";
