@@ -8,7 +8,7 @@ box-sizing: border-box;
 /* --fonth1: Russo One, sans-serif;
 --fontothers:  Concert One, sans-serif; */
 font-family: var(--fontothers);
-font-weight: 400;
+font-weight: 500;
 /* fontset2 */
 --fonth1: Poetsen one, sans-serif;
 --fontothers:  Nunito, sans-serif;
@@ -123,6 +123,7 @@ display: grid;
 min-height: calc(100vh  - 4rem);
 grid-template-columns: 1fr 2fr;
 padding: 2rem;
+gap: 0;
 overflow: hidden;
     .hero-left{
         display: flex;
@@ -166,6 +167,12 @@ min-height: 600px;
 grid-template-columns: 2fr 1fr;
 padding: 2rem;
 overflow: hidden;
+
+animation: jump 1s ease-in-out;
+animation-timeline: view();
+animation-range: 0% cover 50%;
+
+
     .support-left{
         display: flex;
         background-image: url('asset/gallery6.jpg');
@@ -192,12 +199,36 @@ overflow: hidden;
     }
 }
 
+
+
+/* Keyframes for Animations */
+@keyframes jump{
+    from{opacity: 0.5; transform: translateY(200px)}
+    to{opacity: 1; transform: translateY(0px)}
+}
+
+@keyframes appear{
+    from{opacity: 0.8; transform: scale(0.7)}
+    to{opacity: 1; transform: scale(1)}
+}
+
+
+
+
+
+/* End of Keyframes for Animations */
+
 #recommended{
 display: flex;
 flex-direction: column;
 justify-content: center;
 padding: 2rem;
 overflow: hidden;
+
+animation: appear 1s linear both;
+animation-timeline: view();
+animation-range: 0% cover 25%;
+
     .hero-products{ 
         display: flex;
         flex-wrap: wrap;
@@ -237,10 +268,11 @@ overflow: hidden;
         width: clamp(300px, 80vw, 600px);
         background-color: var(--orangegrey);
         position: absolute;
-        bottom: 0;
+        bottom: 1rem;
         left: 0;
         color: var(--mainbrown);
         font-size: var(--ptext);
+        font-weight: 500;
         }
         #card2{
         background-image: url("asset/hero_sun_dried_pork2.jpg");
@@ -256,10 +288,11 @@ overflow: hidden;
         width: clamp(300px, 80vw, 600px);
         background-color: var(--orangegrey);
         position: absolute;
-        bottom: 0;
+        bottom: 1rem;
         left: 0;
         color: var(--mainbrown);
         font-size: var(--ptext);
+        font-weight: 500;
         }
         #card3{
         background-image: url("asset/hero_cheesy_crab_rangoon2.jpg");
@@ -275,10 +308,11 @@ overflow: hidden;
         width: clamp(300px, 80vw, 600px);
         background-color: var(--orangegrey);
         position: absolute;
-        bottom: 0;
+        bottom: 1rem;
         left: 0;
         color: var(--mainbrown);
         font-size: var(--ptext);
+        font-weight: 500;
         }
         #card4{
         background-image: url("asset/hero_mango_sticky_rice2.jpg");
@@ -294,10 +328,11 @@ overflow: hidden;
         width: clamp(300px, 80vw, 600px);
         background-color: var(--orangegrey);
         position: absolute;
-        bottom: 0;
+        bottom: 1rem;
         left: 0;
         color: var(--mainbrown);
         font-size: var(--ptext);
+        font-weight: 500;
         }
     }
     .btnHero{
@@ -307,6 +342,7 @@ overflow: hidden;
         border: 1px solid var(--milkybrown);
         border-top:0;
         padding: 1rem 0 2rem 0;
+
     }
 }
 
@@ -341,6 +377,8 @@ overflow: hidden;
         border-left:0;
         justify-content: center;
         padding: 3rem;
+
+        
         .test-cards{
             display: flex;
             flex-direction: column;
@@ -379,6 +417,12 @@ overflow: hidden;
     grid-template-areas: "top"
                          "bottom";
     overflow: hidden;
+
+    animation: appear 1s linear both;
+    animation-timeline: view();
+    animation-range: 0% cover 30%;
+
+
     .gallery-top{
         display: flex;
         justify-content: center;
@@ -1057,9 +1101,9 @@ footer{
     }
     #gallery{
         display: grid;
-        width: calc(100% - 1rem);
+        width: 100%;
         grid-template-columns: 1fr;
-        margin: 0 0.5rem 0 0.5rem;
+        margin: 0;
         overflow: hidden;
         .gallery-top{
             h3{
