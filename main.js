@@ -46,7 +46,7 @@ function getData(){
     document.querySelector(".nav-links2").style.display ="none";
     document.getElementById("menuclose").style.display = "none";
     document.getElementById("hamburger").style.display = "flex";
-    }, 5000)
+    }, 3000)
   }
   function closeMenu(){
     document.querySelector(".nav-links2").style.display ="none";
