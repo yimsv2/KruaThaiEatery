@@ -7,17 +7,17 @@ box-sizing: border-box;
 /* --fonth1: Russo One, sans-serif;
 --fontothers:  Concert One, sans-serif; */
 font-family: var(--fontothers);
-font-weight: 400;
+font-weight: 500;
 /* fontset2 */
---fonth1: Poetsen one, sans-serif;
+--fonth1: Cal Sans, sans-serif;
 --fontothers:  Nunito, sans-serif;
 
 
 --mainbrown: #995b34;
 --milkybrown:#e0d7b7;
---orange: #e88504;
---orangegrey:#f9f4e5;
---h1text: clamp(38px, 10vw, 48px);
+--orange: #ff9811;
+--orangegrey:#f9f4e1;
+--h1text: clamp(38px, 10vw, 44px);
 --h2text: clamp(30px, 8vw, 32px);
 --h3text: clamp(24px, 6vw, 28px);
 --ptext: clamp(18px, 5vw, 20px);
