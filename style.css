@@ -18,9 +18,9 @@ font-weight: 500;
 --milkybrown:#e0d7b7;
 --orange: #ff9811;
 --orangegrey:#f9f4e1;
---h1text: clamp(38px, 10vw, 44px);
---h2text: clamp(30px, 8vw, 32px);
---h3text: clamp(24px, 6vw, 28px);
+--h1text: clamp(32px, 5vw, 44px);
+--h2text: clamp(28px, 5vw, 30px);
+--h3text: clamp(24px, 5vw, 26px);
 --ptext: clamp(18px, 5vw, 20px);
 --atext: clamp(18px, 5vw, 20px);
 }
@@ -128,7 +128,7 @@ nav a:hover, nav a:focus{
 
 #hero{
 display: grid;
-height: calc(100vh - 80px);
+height: clamp(600px, calc(100vh - 80px), 1080px);
 grid-template-columns: 1fr 2fr;
 grid-template-areas: "hero-left hero-right";
 padding: 2rem;
@@ -140,6 +140,7 @@ position: relative;
         position: absolute;
         top: 20px;
         left: 0px;
+        z-index: 7;
         width: 130%;
         height: calc(100vh - 200px);
         grid-area: hero-left;
@@ -157,7 +158,7 @@ position: relative;
         text-align: left;
         color: var(--orange);
         font-size: var(--h1text);
-        
+        animation: font-appear 1s ease;
         }
         h2{
         display: flex;
@@ -165,19 +166,27 @@ position: relative;
         color: var(--mainbrown);
         font-size: var(--h2text);
         margin-top: clamp(1rem, 30vw, 1.5rem);
+        animation: font-appear 1.5s ease;
+       
         }
         .btn{
             margin-top: clamp(1rem, 30vw, 1.5rem);
+            animation: font-appear 2s ease;
         }
     }
     .hero-right{
         display: flex;
+        position: absolute;
+        top:0;
+        z-index: 6;
         width: 100%;
+        height: 100%;
         grid-area: hero-right;
         background-image: url('asset/hero_pix.jpg');
         background-position: right;
         background-size: cover;
         border-top-right-radius: 10vw;
+        animation: jump 2s ease;
     }
 }
 
@@ -190,9 +199,9 @@ padding: 2rem;
 overflow: hidden;
 position: relative;
 
-animation: jump 1s ease-in-out;
+animation: jump 2s ease;
 animation-timeline: view();
-animation-range: 0% cover 25%;
+animation-range: 0% cover 30%;
 
 
     .support-left{
@@ -207,14 +216,14 @@ animation-range: 0% cover 25%;
         display: flex;
         grid-area: support-right;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         padding: 4rem;
         background-color: var(--orangegrey);
         position: absolute;
         top: 20px;
         left: -100px;
         width: 130%;
-        min-height: 50vh;
+        min-height: 70vh;
         border-top-right-radius: 10vw;
 
         h3{
@@ -244,8 +253,12 @@ animation-range: 0% cover 25%;
 
 
 /* Keyframes for Animations */
+@keyframes font-appear{
+            from{opacity: 0.3; transform: scale(0.6)}
+            to{opacity: 1; transform: scale(1)}
+        }
 @keyframes jump{
-    from{opacity: 0.5; transform: translateY(200px)}
+    from{opacity: 0.3; transform: translateY(200px)}
     to{opacity: 1; transform: translateY(0px)}
 }
 
@@ -268,7 +281,7 @@ justify-content: center;
 padding: 2rem;
 overflow: hidden;
 
-animation: jump 1s ease both;
+animation: jump 2s ease both;
 animation-timeline: view();
 animation-range: 0% cover 25%;
 
@@ -461,7 +474,7 @@ overflow: hidden;
                          "bottom";
     overflow: hidden;
 
-    animation: appear 1s ease both;
+    animation: appear 2s ease both;
     animation-timeline: view();
     animation-range: 0% cover 25%;
 
@@ -550,7 +563,7 @@ grid-template-columns: repeat(4, 1fr);
 padding: 2rem;
 overflow: hidden;
 
-animation: jump 1s ease both;
+animation: jump 2s ease both;
 animation-timeline: view();
 animation-range: 0% cover 30%;
 
@@ -776,6 +789,7 @@ footer{
         padding: 0;
 
         .hero-right{
+            animation: none;
             display: none;
         }
         .hero-left{
@@ -1087,18 +1101,20 @@ footer{
     }
     #hero{
         display: grid;
+        height: clamp(500px, calc(100vh - 80px), 1080px);
         grid-template-columns: 1fr;
         padding: 0 2rem;
         border-radius: none;
 
         .hero-right{
+            animation: none;
             display: none;
         }
         .hero-left{
             padding: 2rem 0;
             margin-bottom: 2rem;
             display: flex;
-            height: calc(100vh - 80px);
+            height: 100%;
             width: 100%;
             align-items: center;
             justify-content: center;
@@ -1124,19 +1140,21 @@ footer{
     #support-info{
         display: grid;
         width: 100%;
-        height: 100vh;
+        height: 800px;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 3fr 5fr;
         grid-template-areas: "support-left"
                              "support-right";
         padding: 2rem;
         .support-left{
             display: flex;
+            height: 100%;
             border-radius: 0;
             border-top-right-radius: 15vw;
         }
         .support-right{
             display: flex;
+            align-items: flex-start;
             width: 100%;
             height: 100%;
             top: 0;
@@ -1162,7 +1180,7 @@ footer{
     }
     #recommended{
         display: flex;
-        margin: 0 2rem;
+        margin: 2rem 2rem 0 2rem;
         padding:0;
         .hero-products{
             padding: 1rem;
