@@ -882,9 +882,6 @@ footer{
                 font-size: var(--ptext);
             }
         }
-        .btnHero{
-                margin: 1.5rem 0 1.5rem 0;
-        }
     }
     #testimonials{
         display: grid;
