@@ -17,9 +17,9 @@ font-weight: 500;
 --milkybrown:#e0d7b7;
 --orange: #ff9811;
 --orangegrey:#f9f4e1;
---h1text: clamp(38px, 10vw, 44px);
---h2text: clamp(30px, 8vw, 32px);
---h3text: clamp(24px, 6vw, 28px);
+--h1text: clamp(32px, 5vw, 44px);
+--h2text: clamp(28px, 5vw, 30px);
+--h3text: clamp(24px, 5vw, 26px);
 --ptext: clamp(18px, 5vw, 20px);
 --atext: clamp(18px, 5vw, 20px);
 }
