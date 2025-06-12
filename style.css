@@ -23,6 +23,7 @@ font-weight: 500;
 --h3text: clamp(24px, 5vw, 26px);
 --ptext: clamp(18px, 5vw, 20px);
 --atext: clamp(18px, 5vw, 20px);
+scroll-behavior: smooth;
 }
 body{
 max-width: 1920px;
@@ -221,7 +222,7 @@ animation-range: 0% cover 30%;
         background-color: var(--orangegrey);
         position: absolute;
         top: 20px;
-        left: -100px;
+        right: 0px;
         width: 130%;
         min-height: 70vh;
         border-top-right-radius: 10vw;
@@ -711,7 +712,7 @@ footer{
             top: 70px;
             right:10px;
             z-index: 99;
-            animation: appear 0.7s ease-in-out;
+            animation: appear 0.7s ease;
             li{
                 display: flex;
                 justify-content: center;
@@ -786,7 +787,9 @@ footer{
     #hero{
         display: grid;
         grid-template-columns: 1fr;
+        height: calc(100vh - 60px);
         padding: 0;
+        place-items: start;
 
         .hero-right{
             animation: none;
@@ -795,12 +798,13 @@ footer{
         .hero-left{
             top:0;
             left: 0;
-            padding: 1.5rem;
+            padding: 1.5rem 1.5rem 0 1.5rem;
             display: flex;
+            flex-direction: column;
             width: 100%;
-            height: calc(100vh - 80px);
-            align-items: center;
+            height: calc(100vh - 60px);
             justify-content: center;
+            align-items: center;
             background-image: url("asset/hero_pix.jpg");
             background-position: right;
             background-size: cover;
@@ -808,7 +812,6 @@ footer{
             border-radius: 0;
             h1{
                 font-size: var(--h1text);
-                margin-top: 3rem;
             }
             h2{
                 font-size: var(--h2text);
@@ -872,7 +875,7 @@ footer{
     }
     #recommended{
         display: flex;
-        margin: 0.5rem;
+        margin: 2rem 0.5rem 0 0.5rem;
         .hero-products{
             padding: 1rem;
             h3{
@@ -885,7 +888,7 @@ footer{
     }
     #testimonials{
         display: grid;
-        margin: 1rem 0.5rem 0 0.5rem;
+        margin: 2rem 0.5rem 1rem 0.5rem;
         grid-template-columns: 1fr;
         grid-template-rows: 80px auto;
         grid-auto-rows: auto;
@@ -1111,10 +1114,11 @@ footer{
             padding: 2rem 0;
             margin-bottom: 2rem;
             display: flex;
+            flex-direction: column;
             height: 100%;
             width: 100%;
-            align-items: center;
             justify-content: center;
+            align-items: center;
             background-image: url("asset/hero_pix.jpg");
             background-position: right;
             background-size: cover;
